@@ -32,7 +32,7 @@ const TableRow = () => {
     setTaskArray(
       taskArray.map(item => {
         if (item.id === isEditItem) {
-          return { ...item, title, description, seconds, minutes, hours };
+          return { ...item, title, description };
         }
         return item;
       })

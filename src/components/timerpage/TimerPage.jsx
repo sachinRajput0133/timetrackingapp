@@ -87,7 +87,7 @@ const TimerPage = () => {
           </Text>
         </Box>
 
-        <HStack alignItems={'center'} gap={["10","2"]} justifyContent="center">
+        <HStack alignItems={'center'} gap={["5","2"]} justifyContent="center">
           <Button
             isDisabled={toggleTimer ? true : false}
             size={["md",'sm']}

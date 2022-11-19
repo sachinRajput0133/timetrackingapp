@@ -7,9 +7,9 @@ import { ColorModeSwitcher } from './ColorModeSwitcher';
 function App() {
   return (
     <>
-      <ColorModeSwitcher />
 
-      <div className="container">
+       <ColorModeSwitcher />
+       <div className="container">
         <TimerPage />
         <TaskList />
       </div>
