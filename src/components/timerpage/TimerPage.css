@@ -1,6 +1,6 @@
 .timer-container{
-   filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.24));
-   background-color: rgba(173, 187, 185, 0.596);
+   /* filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.24)); */
+   box-shadow:-2px 0 10px rgba(107, 70 ,193 ,0.26);
    padding: 2vmax;
    border-radius: 10px;
 }

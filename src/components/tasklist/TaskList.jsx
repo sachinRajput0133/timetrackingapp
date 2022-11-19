@@ -17,7 +17,7 @@ const TaskList = () => {
 
 
   return (
-    <Box  borderRadius={"10px"} minW={["100vw","40vw"]} mt="30px"  p={"10px"} border={"1px solid grey"} justifyContent={"center"} display="flex"  alignItems={"center"}>
+    <Box  boxShadow={'-2px 0 10px rgba(107, 70 ,193 ,0.26)'}  borderRadius={"10px"} minW={["100vw","40vw"]}  mt="30px"  p={"10px"} justifyContent={"center"} display="flex"  alignItems={"center"}>
       <TableContainer w={['100vw', 'full']}>
         <Table variant={'simple'} size="md">
           <TableCaption>All Tasks</TableCaption>
