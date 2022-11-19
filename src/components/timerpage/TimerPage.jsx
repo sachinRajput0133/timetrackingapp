@@ -27,16 +27,16 @@ const TimerPage = () => {
     title,
     setTitle,
     description,
-    setDescription
+    setDescription,
   } = useContext(TimerContext);
 
   const { isOpen, onOpen, onClose } = useDisclosure();
-// open save handler
+  // open save handler
   const saveOpenHandler = () => {
     onOpen();
   };
 
-  //Submit task handler 
+  //Submit task handler
   const taskSubmitHandler = e => {
     e.preventDefault();
 
@@ -45,8 +45,8 @@ const TimerPage = () => {
       { title, description, seconds, minutes, hours, id: uuidv4() },
     ]);
 
-   setTitle("") 
-   setDescription("")
+    setTitle('');
+    setDescription('');
     onClose();
   };
 
@@ -71,11 +71,16 @@ const TimerPage = () => {
     return () => {
       clearInterval(interval);
     };
-  }, [toggleTimer, seconds, setHours, setMinutes, setSeconds , minutes ]);
+  }, [toggleTimer, seconds, setHours, setMinutes, setSeconds, minutes]);
 
   return (
     <div className="timer-container">
-      <Stack gap={'5px'} width={["85vw","200px"]}   >
+      <Stack
+        // border={'1px solid red'}
+        gap={'5px'}
+        width={["75vw",'77vw', '200px']}
+        boxSizing="border-box"
+      >
         <Box display={'flex'} justifyContent="center" alignItems="center">
           <Text
             fontWeight={'bold'}
@@ -87,22 +92,22 @@ const TimerPage = () => {
           </Text>
         </Box>
 
-        <HStack alignItems={'center'} gap={["5","2"]} justifyContent="center">
+        <HStack alignItems={'center'} gap={['5', '2']} justifyContent="center">
           <Button
             isDisabled={toggleTimer ? true : false}
-            size={["md",'sm']}
+            size={['md', 'sm']}
             onClick={() => setToggleTimer(true)}
           >
             Start
           </Button>
           <Button
             isDisabled={!toggleTimer ? true : false}
-            size={["md",'sm']}
+            size={['md', 'sm']}
             onClick={() => setToggleTimer(!toggleTimer)}
           >
             Pause
           </Button>
-          <Button size={["md",'sm']} onClick={saveOpenHandler}>
+          <Button size={['md', 'sm']} onClick={saveOpenHandler}>
             save
           </Button>
         </HStack>

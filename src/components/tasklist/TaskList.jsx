@@ -12,12 +12,19 @@ import React from 'react';
 import TableRow from './TableRow';
 
 const TaskList = () => {
-
-
-
-
   return (
-    <Box  boxShadow={'-2px 0 10px rgba(107, 70 ,193 ,0.26)'}  borderRadius={"10px"} minW={["100vw","40vw"]}  mt="30px"  p={"10px"} justifyContent={"center"} display="flex"  alignItems={"center"}>
+    <Box
+      boxShadow={'-2px 0 10px rgba(107, 70 ,193 ,0.26)'}
+      borderRadius={'10px'}
+      // minW={['85vw', '40vw']}
+      // maxW={['85vw', '40vw']}
+      width={['85vw',"450px","600px", '750px']}
+      mt="30px"
+      p={'10px'}
+      justifyContent={'center'}
+      display="flex"
+      alignItems={'center'}
+    >
       <TableContainer w={['100vw', 'full']}>
         <Table variant={'simple'} size="md">
           <TableCaption>All Tasks</TableCaption>
@@ -25,12 +32,12 @@ const TaskList = () => {
             <Tr>
               <Th>Task List</Th>
               <Th>Time</Th>
-              <Th isNumeric >Action</Th>
+              <Th isNumeric>Action</Th>
             </Tr>
           </Thead>
           <Tbody>
             {/* table row */}
-            <TableRow/>
+            <TableRow />
           </Tbody>
         </Table>
       </TableContainer>
