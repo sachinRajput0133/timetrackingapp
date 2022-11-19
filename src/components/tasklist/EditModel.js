@@ -70,7 +70,7 @@ function EditModel({isOpen,  onClose ,editSubmitHandler}) {
            Save
           </Button>
           <Button size={"md"}   my={'4'} colorScheme="red" onClick={onClose}  >
-           Close
+           Cancel
           </Button>
             
          </HStack>
