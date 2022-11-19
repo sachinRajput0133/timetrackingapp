@@ -4,23 +4,20 @@ import { createContext } from 'react';
 const TimerContext = createContext();
 
 export const TimerHolder = ({ children }) => {
-    const initialState=   JSON.parse(localStorage.getItem("allTasks")) || []
-    const [taskArray, setTaskArray] = useState(initialState)
-const [taskDetail, setTaskDetail] = useState({})
+  const initialState = JSON.parse(localStorage.getItem('allTasks')) || [];
+  const [taskArray, setTaskArray] = useState(initialState);
+  const [taskDetail, setTaskDetail] = useState({});
   const [time, setTime] = useState(0);
   const [seconds, setSeconds] = useState(0);
   const [minutes, setMinutes] = useState(0);
   const [hours, setHours] = useState(0);
   const [toggleTimer, setToggleTimer] = useState(false);
-  const [title, setTitle] = useState("")
-  const [description, setDescription] = useState("")
+  const [title, setTitle] = useState('');
+  const [description, setDescription] = useState('');
 
-useEffect(() => {
-
- localStorage.setItem("allTasks",JSON.stringify(taskArray))
-  
-}, [taskArray])
-
+  useEffect(() => {
+    localStorage.setItem('allTasks', JSON.stringify(taskArray));
+  }, [taskArray]);
 
   return (
     <TimerContext.Provider
@@ -42,11 +39,7 @@ useEffect(() => {
         taskArray,
         setTaskArray,
         taskDetail,
-        setTaskDetail
-        
-
-
-
+        setTaskDetail,
       }}
     >
       {children}

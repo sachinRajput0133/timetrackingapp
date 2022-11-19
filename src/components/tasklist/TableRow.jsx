@@ -6,26 +6,22 @@ import EditModel from './EditModel';
 const TableRow = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const {
-    hours,
-    seconds,
-    minutes,
     taskArray,
     setTaskArray,
-
     setTitle,
-
     setDescription,
   } = useContext(TimerContext);
+
   const [isEditItem, setIsEditItem] = useState('');
 
-  // delete task
+  // Delete task Handler
   const deleteButtonHandler = id => {
     console.log('hlo');
     setTaskArray(prev => prev.filter(item => item.id !== id));
     localStorage.setItem('allTasks', JSON.stringify(taskArray));
   };
 
-  // Edit Task
+  // Edit Task Submit Handler
   const editSubmitHandler = (e, title, description) => {
     e.preventDefault();
 
@@ -42,7 +38,7 @@ const TableRow = () => {
     onClose();
   };
 
-  // Open edit Model
+  // Open Edit Model
   const editOpenHandler = id => {
     const task = taskArray.find(item => item.id === id);
     setTitle(task.title);
