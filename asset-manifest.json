@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/timetrackingapp/static/css/main.4697c62f.css",
+    "main.js": "/timetrackingapp/static/js/main.95c89fa1.js",
+    "index.html": "/timetrackingapp/index.html",
+    "main.4697c62f.css.map": "/timetrackingapp/static/css/main.4697c62f.css.map",
+    "main.95c89fa1.js.map": "/timetrackingapp/static/js/main.95c89fa1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4697c62f.css",
+    "static/js/main.95c89fa1.js"
+  ]
+}
