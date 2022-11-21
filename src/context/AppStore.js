@@ -40,6 +40,7 @@ export const TimerHolder = ({ children }) => {
         setTaskArray,
         taskDetail,
         setTaskDetail,
+        
       }}
     >
       {children}
